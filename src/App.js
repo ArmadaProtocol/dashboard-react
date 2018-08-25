@@ -14,6 +14,7 @@ import Footer from "./components/layout/Footer";
 import Listings from "./components/pages/Listings";
 import Analytics from "./components/pages/Analytics";
 import Discover from "./components/pages/Discover";
+import Property from "./components/pages/Property";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
               <Route exact path="/" component={Listings} />
               <Route exact path="/analytics" component={Analytics} />
               <Route exact path="/discover" component={Discover} />
+              <Route exact path="/property" component={Property} />
             </div>
           </div>
           <Footer />
