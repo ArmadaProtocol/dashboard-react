@@ -26,20 +26,16 @@ const Sidebar = props => {
             </li>
             <li>
               {" "}
-              <a href="#" aria-expanded="false">
+              <Link to="/trade" aria-expanded="false">
                 <i className="fa fa-exchange" />
-                <span className="hide-menu">
-                  <strike>Trade</strike>
-                </span>
-              </a>
+                <span className="hide-menu">Trade</span>
+              </Link>
             </li>
             <li>
               {" "}
               <Link to="/discover" aria-expanded="false">
                 <i className="fa fa-search" />
-                <span className="hide-menu">
-                  Discover
-                </span>
+                <span className="hide-menu">Discover</span>
               </Link>
             </li>
           </ul>

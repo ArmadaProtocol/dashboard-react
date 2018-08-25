@@ -9,11 +9,11 @@ const NavBar = () => (
   <div className="header">
     <nav className="navbar top-navbar navbar-expand-md navbar-light">
       <div className="navbar-header">
-        <a className="navbar-brand" href="index.html">
+        <Link className="navbar-brand" to="/">
           <b>
             <img src="images/logo-text.png" className="header-logo" />
           </b>
-        </a>
+        </Link>
       </div>
       <div className="navbar-collapse">
         <ul className="navbar-nav mr-auto mt-md-0" />
