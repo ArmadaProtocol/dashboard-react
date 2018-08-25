@@ -35,12 +35,12 @@ const Sidebar = props => {
             </li>
             <li>
               {" "}
-              <a href="#" aria-expanded="false">
+              <Link to="/discover" aria-expanded="false">
                 <i className="fa fa-search" />
                 <span className="hide-menu">
-                  <strike>Discover</strike>
+                  Discover
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

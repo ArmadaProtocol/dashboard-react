@@ -2269,11 +2269,47 @@ textarea {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
+#property_specific_image{
+  border-radius: 5px;
+  height: 450px;
+  width: auto;
+}
+
 #incardpropertyimage {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   height: 210px;
   width: auto;
+}
+
+#discover_card_lower_banner_portfolio {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 35px;
+  background-color: green;  
+  text-align: center;
+}
+
+#discover_card_lower_banner_unowned {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 35px;
+  background-color: grey; 
+  text-align: center;
+}
+
+#discover_card_lower_banner_new {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 35px;
+  background-color: pink; 
+  text-align: center;
+}
+
+#discover_card_lower_banner_text {
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #innercard_headertext {
@@ -2287,6 +2323,17 @@ textarea {
 #innercard_headertext h3{
   margin-bottom: 5px;
   text-align: center;
+}
+
+.property_focus_card p{
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.property_focus_card h3{
+  margin-top: 0px;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
 #innercard_normaltext_subtext {

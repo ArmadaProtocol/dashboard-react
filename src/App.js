@@ -13,6 +13,7 @@ import RowPageTitle from "./components/layout/RowPageTitle";
 import Footer from "./components/layout/Footer";
 import Listings from "./components/pages/Listings";
 import Analytics from "./components/pages/Analytics";
+import Discover from "./components/pages/Discover";
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
             <div className="container-fluid">
               <Route exact path="/" component={Listings} />
               <Route exact path="/analytics" component={Analytics} />
+              <Route exact path="/discover" component={Discover} />
             </div>
           </div>
           <Footer />
