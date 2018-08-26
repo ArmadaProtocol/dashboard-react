@@ -11,11 +11,11 @@ import Navbar from "./components/layout/Navbar";
 import Sidebar from "./components/layout/Sidebar";
 import RowPageTitle from "./components/layout/RowPageTitle";
 import Footer from "./components/layout/Footer";
-import Listings from "./components/pages/Listings";
-import Analytics from "./components/pages/Analytics";
-import Discover from "./components/pages/Discover";
-import Property from "./components/pages/Property";
-import Trade from "./components/pages/Trade";
+import Listings from "./components/listings/Listings";
+import Analytics from "./components/analytics/Analytics";
+import Discover from "./components/discover/Discover";
+import Property from "./components/property/Property";
+import Trade from "./components/trade/Trade";
 
 class App extends Component {
   render() {

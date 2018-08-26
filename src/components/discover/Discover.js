@@ -29,6 +29,7 @@ class Analytics extends React.Component {
                 </div>
               </div>
             </div>
+
             <div id="discover_card_lower_banner_portfolio">
               <span id="discover_card_lower_banner_text">IN PORTFOLIO</span>
             </div>
