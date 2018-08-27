@@ -24,7 +24,7 @@ class App extends Component {
         <div className="App">
           <Navbar />
           <Sidebar />
-          <div className="container page-wrapper">
+          <div className="page-wrapper">
             <RowPageTitle />
             <div className="container-fluid">
               <Route exact path="/" component={Listings} />
