@@ -17,7 +17,9 @@ class RowPageTitle extends React.Component {
             <li className="breadcrumb-item">
               <a href="javascript:void(0)">Home</a>
             </li>
-            <li className="breadcrumb-item active">Dashboard</li>
+            <li className="breadcrumb-item active">
+              {this.props.sideBarPageName}
+            </li>
           </ol>
         </div>
       </div>
