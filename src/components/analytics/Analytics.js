@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 class Analytics extends React.Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-4">
             <div className="card bg-primary p-20">
               <div className="media widget-ten">
                 <div className="media-left meida media-middle">
@@ -21,7 +21,7 @@ class Analytics extends React.Component {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <div className="card bg-pink p-20">
               <div className="media widget-ten">
                 <div className="media-left meida media-middle">
@@ -36,7 +36,7 @@ class Analytics extends React.Component {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-4">
             <div className="card bg-danger p-20">
               <div className="media widget-ten">
                 <div className="media-left meida media-middle">
@@ -45,8 +45,8 @@ class Analytics extends React.Component {
                   </span>
                 </div>
                 <div className="media-body media-text-right">
-                  <h2 className="color-white">278</h2>
-                  <p className="m-b-0">Total Visitor</p>
+                  <h2 className="color-white">3</h2>
+                  <p className="m-b-0">Countries</p>
                 </div>
               </div>
             </div>

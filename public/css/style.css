@@ -1575,6 +1575,8 @@ textarea {
 }
 .sidebar-nav ul li {
   list-style: none;
+  text-align: left;
+  margin-left: 15px;
 }
 .sidebar-nav ul li a {
   color: #607d8b;
@@ -2286,6 +2288,7 @@ textarea {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 35px;
+  line-height: 35px;
   background-color: green;  
   text-align: center;
 }
@@ -2294,6 +2297,7 @@ textarea {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 35px;
+  line-height: 35px;
   background-color: grey; 
   text-align: center;
 }
@@ -2302,6 +2306,7 @@ textarea {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   height: 35px;
+  line-height: 35px;
   background-color: pink; 
   text-align: center;
 }

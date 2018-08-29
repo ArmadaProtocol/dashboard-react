@@ -18,14 +18,32 @@ import Property from "./components/property/Property";
 import Trade from "./components/trade/Trade";
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      sideBarPageName: "Dashboard"
+    };
+  }
+
+
+  passSideBarNameHandler = (newPageName) => {
+      this.setState({
+        sideBarPageName: newPageName
+      });
+  }
+
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
-          <Sidebar />
+          <Navbar/>
+          <Sidebar 
+            passSideBarName = {this.passSideBarNameHandler.bind(this)}
+          />
           <div className="page-wrapper">
-            <RowPageTitle />
+            <RowPageTitle 
+              sideBarPageName={this.state.sideBarPageName}
+            />
             <div className="container-fluid">
               <Route exact path="/" component={Listings} />
               <Route exact path="/analytics" component={Analytics} />
