@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 
 class DiscoverPropertyCard extends React.Component {
   render() {
@@ -12,7 +14,8 @@ class DiscoverPropertyCard extends React.Component {
       numInvestors,
       numTokens,
       imageSrc,
-      status
+      status,
+      link
     } = this.props;
 
     let cardCssId;
@@ -34,10 +37,12 @@ class DiscoverPropertyCard extends React.Component {
           <img src={imageSrc} id="incardpropertyimage" />
 
           <div id="innercard_headertext">
-            <h2>{streetAddress || "123 Fake Street"}</h2>
-            <p>
-              {city || "New York"}, {state || "NY"} {zipCode || "90210"}
-            </p>
+            <Link to={link || "/discover"} id="incardpropertyimage">
+                <h2>{streetAddress || "123 Fake Street"}</h2>
+              <p>
+                {city || "New York"}, {state || "NY"} {zipCode || "90210"}
+              </p>
+            </Link>
             <hr />
             <div className="container-fluid">
               <div className="row justify-content-center">

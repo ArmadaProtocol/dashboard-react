@@ -1,16 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Button, Card, CardBody, CardHeader, Col, Modal, ModalBody, ModalFooter, ModalHeader, Row } from 'reactstrap';
 
 class Property extends React.Component {
-  render() {
-    const styles = {
-      color: "red",
-      backgroundColor: "black",
-      fontWeight: "bold"
+  constructor(props){
+
+    super(props)
+    this.state = {
+      large: false,
     };
 
+    this.toggleLarge = this.toggleLarge.bind(this);
+  }
+
+  toggleLarge() {
+    this.setState({
+      large: !this.state.large,
+    });
+}
+  
+  render() {
+
     return (
-      <div class="container">
+      <div>
         <div class="row">
           <div class="col-md-12">
             <div class="card p-30">
@@ -37,7 +49,7 @@ class Property extends React.Component {
             </div>
             <div class="row">
               <div class="col-md-12">
-                <div class="card" style={styles}>
+                <div class="card">
                   <div>
                     <h2>About this Property</h2>
                     <hr />
@@ -135,7 +147,7 @@ class Property extends React.Component {
                   <div class="row">
                     <div class="col-md-6 property_focus_card">
                       <p>Property Manager</p>
-                      <h3>Active Property Co.</h3>
+                      <h3>TMC Partners</h3>
                       <p>Tax</p>
                       <h3>10%</h3>
                     </div>
@@ -145,19 +157,52 @@ class Property extends React.Component {
                     </div>
                   </div>
                   TRADE
+                  <hr />
                   <div class="row">
                     <div class="col-md-12">
-                      <button type="button" class="btn btn-danger btn-lg">
-                        Purchase Tokens
-                      </button>
-                      <br />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <button type="button" class="btn btn-info btn-lg">
-                        Sell Tokens
-                      </button>
+
+                      <Button color="danger" size="lg"onClick={this.toggleLarge} className="mr-1">Trade Tokens</Button>
+                      <Modal isOpen={this.state.large} toggle={this.toggleLarge}
+                             className={'modal-lg ' + this.props.className}>
+                        <ModalHeader toggle={this.toggleLarge}>
+                          <h3>Trade Tokens</h3>
+                        </ModalHeader>
+                        <ModalBody>
+                          <b>PROPERTY:</b>
+                          <div>
+                            186 Military Road Unit #6
+                          </div>
+                          <hr />
+                          <b>TRADE TYPE:</b>
+                          <div>
+                            <button type="button" class="btn btn-secondary">Buy</button>
+                            <button type="button" class="btn btn-secondary">Sell</button>
+
+                          </div>
+                          <hr />
+                          <b>TOKEN ASK PRICE:</b>
+                          <div>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="usr" />
+                            </div>
+                          </div>
+                          <hr />
+                          <b>QUANTITY:</b>
+                          <div>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="usr" />
+                            </div>
+                          </div>
+                        </ModalBody>
+                        <ModalFooter>
+                          <Button color="secondary" onClick={this.toggleLarge}>Cancel</Button>
+                          <Button color="success" onClick={this.toggleLarge}>Submit</Button>{' '}
+                        </ModalFooter>
+                      </Modal>
+
+
+                      <br/>
+                      <br/>
                     </div>
                   </div>
                 </div>

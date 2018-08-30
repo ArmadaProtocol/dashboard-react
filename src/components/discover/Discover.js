@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+
 
 // SubComponents
 import DiscoverPropertyCard from "./DiscoverPropertyCard";
@@ -20,6 +22,7 @@ class Discover extends React.Component {
           status="IN PORTFOLIO"
         />
 
+        
         <DiscoverPropertyCard
           marketValue="$900,450"
           streetAddress="36 Boston Ave."
@@ -31,6 +34,7 @@ class Discover extends React.Component {
           imageSrc="/images/property2.jpg"
           status="IN PORTFOLIO"
         />
+
 
         <DiscoverPropertyCard
           marketValue="$284,956"
@@ -54,6 +58,7 @@ class Discover extends React.Component {
           numTokens="18"
           imageSrc="/images/property3.jpg"
           status="IN PORTFOLIO"
+          link = "/property"
         />
 
         <DiscoverPropertyCard

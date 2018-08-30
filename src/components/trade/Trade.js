@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-class Trades extends React.Component {
+// SubComponents
+import Order from "./Order";
+
+class Trade extends React.Component {
   render() {
     return (
       <div class="col-xs-12">
@@ -22,58 +25,20 @@ class Trades extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Buy</td>
-                    <td>36 Boston Ave.</td>
-                    <td>
-                      <span>$108.00</span>
-                    </td>
-                    <td>
-                      <span>200,000</span>
-                    </td>
-                    <td>
-                      <span class="badge badge-success">Done</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Buy</td>
-                    <td>186 Military Road Unit #6</td>
-                    <td>
-                      <span>$57.92</span>
-                    </td>
-                    <td>
-                      <span>18</span>
-                    </td>
-                    <td>
-                      <span class="badge badge-success">Done</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sell</td>
-                    <td>4600 W Guadalupe St</td>
-                    <td>
-                      <span>$1274.12</span>
-                    </td>
-                    <td>
-                      <span>15</span>
-                    </td>
-                    <td>
-                      <span class="badge badge-warning">Pending</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Buy</td>
-                    <td>86 El Dorado Lane </td>
-                    <td>
-                      <span>$19.01</span>
-                    </td>
-                    <td>
-                      <span>2000</span>
-                    </td>
-                    <td>
-                      <span class="badge badge-warning">Pending</span>
-                    </td>
-                  </tr>
+                  <Order
+                    type="Buy"
+                    property="36 Boston Ave."
+                    ask="108.00"
+                    quantity="200,000"
+                    statusDone={true}
+                  />
+                  <Order
+                    type="Buy"
+                    property="9427 Madison St."
+                    ask="72.59"
+                    quantity="106"
+                    statusDone={true}
+                  />
                 </tbody>
               </table>
             </div>
@@ -84,4 +49,4 @@ class Trades extends React.Component {
   }
 }
 
-export default Trades;
+export default Trade;
