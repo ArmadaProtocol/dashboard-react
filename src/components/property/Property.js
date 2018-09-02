@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Card, CardBody, CardHeader, Col, Modal, ModalBody, ModalFooter, ModalHeader, Row } from 'reactstrap';
+import ToggleButton from 'react-toggle-button';
 
 class Property extends React.Component {
   constructor(props){
@@ -174,22 +175,31 @@ class Property extends React.Component {
                           </div>
                           <hr />
                           <b>TRADE TYPE:</b>
-                          <div>
-                            <button type="button" class="btn btn-secondary">Buy</button>
-                            <button type="button" class="btn btn-secondary">Sell</button>
+                          <div class="form-row align-items-center">
+                                                        
+
+                            <div class="col-auto my-1" style={{width: '130px'}}>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                  <option selected>Choose...</option>
+                                  <option value="1">Buy</option>
+                                  <option value="2">Sell</option>
+                                </select>
+                            </div>
+
+
 
                           </div>
                           <hr />
                           <b>TOKEN ASK PRICE:</b>
                           <div>
-                            <div class="form-group">
+                            <div class="form-group" style={{width: '130px'}}>
                               <input type="text" class="form-control" id="usr" />
                             </div>
                           </div>
                           <hr />
                           <b>QUANTITY:</b>
                           <div>
-                            <div class="form-group">
+                            <div class="form-group" style={{width: '130px'}}>
                               <input type="text" class="form-control" id="usr" />
                             </div>
                           </div>
