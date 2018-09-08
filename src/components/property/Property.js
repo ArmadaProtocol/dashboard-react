@@ -9,17 +9,43 @@ class Property extends React.Component {
     super(props)
     this.state = {
       large: false,
+      type: '',
+      ask: '',
+      quantity: '',
     };
 
     this.toggleLarge = this.toggleLarge.bind(this);
+    this.handleType = this.handleType.bind(this);
+    this.handleAsk = this.handleAsk.bind(this);
+    this.handleQuantity = this.handleQuantity.bind(this);
   }
 
   toggleLarge() {
     this.setState({
       large: !this.state.large,
     });
-}
+
+  }
+
+  handleType(event) {
+    this.setState({
+    type: event.target.value,
+    });
+  }
   
+  handleAsk(event) {
+    this.setState({
+    ask: event.target.value,
+    });
+  }
+
+  handleQuantity(event) {
+    this.setState({
+    quantity: event.target.value,
+    });
+  }
+
+
   render() {
 
     return (
@@ -176,31 +202,26 @@ class Property extends React.Component {
                           <hr />
                           <b>TRADE TYPE:</b>
                           <div class="form-row align-items-center">
-                                                        
-
                             <div class="col-auto my-1" style={{width: '130px'}}>
-                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <select value={this.state.type} onChange={this.handleType} class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                                   <option selected>Choose...</option>
-                                  <option value="1">Buy</option>
-                                  <option value="2">Sell</option>
+                                  <option value="buy">Buy</option>
+                                  <option value="sell">Sell</option>
                                 </select>
                             </div>
-
-
-
                           </div>
                           <hr />
                           <b>TOKEN ASK PRICE:</b>
                           <div>
                             <div class="form-group" style={{width: '130px'}}>
-                              <input type="text" class="form-control" id="usr" />
+                              <input value={this.state.ask} type="text" class="form-control" id="usr" onChange={this.handleAsk}/>
                             </div>
                           </div>
                           <hr />
                           <b>QUANTITY:</b>
                           <div>
                             <div class="form-group" style={{width: '130px'}}>
-                              <input type="text" class="form-control" id="usr" />
+                              <input type="text" value={this.state.quantity} class="form-control" id="usr" onChange={this.handleQuantity}/>
                             </div>
                           </div>
                         </ModalBody>
